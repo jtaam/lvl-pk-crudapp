@@ -16,6 +16,7 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th class="text-center">Action</th>
       </tr>
       </thead>
       <tbody>
@@ -26,6 +27,8 @@
             <td>{{$student->last_name}}</td>
             <td>{{$student->email}}</td>
             <td>{{$student->phone}}</td>
+            <td class="text-center"><a href="{{route('edit', $student->id)}}" class="btn btn-raised btn-info btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>
+ </a> || <a href="" class="btn btn-raised btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
           </tr>
         @endforeach
 
