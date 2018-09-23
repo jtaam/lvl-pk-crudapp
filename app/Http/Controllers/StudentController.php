@@ -8,7 +8,8 @@ use App\Student;
 class StudentController extends Controller
 {
   public function index(){
-    $students = Student::all();
+    // $students = Student::all();
+    $students = Student::paginate(3);
     return view('welcome')->with(compact('students'));
   }
 

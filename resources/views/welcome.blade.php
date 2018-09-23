@@ -34,4 +34,5 @@
 
       </tbody>
     </table>
+    {{$students->links()}}
 @endsection

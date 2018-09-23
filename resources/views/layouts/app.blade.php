@@ -22,7 +22,7 @@
 
 
 <script src="http://127.0.0.1:8888/public/cdn/jquery/jquery-3.2.1.min.js"></script>
-
+<script src="http://127.0.0.1:8888/public/cdn/bootstrap-3/js/bootstrap.min.js"></script>
 <script src="http://127.0.0.1:8888/public/cdn/bootstrap-material-design/js/material.min.js"></script>
 <script src="http://127.0.0.1:8888/public/cdn/bootstrap-material-design/js/ripples.min.js"></script>
 
