@@ -28,7 +28,18 @@
             <td>{{$student->email}}</td>
             <td>{{$student->phone}}</td>
             <td class="text-center"><a href="{{route('edit', $student->id)}}" class="btn btn-raised btn-info btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>
- </a> || <a href="" class="btn btn-raised btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+ </a> ||
+  <form id="delete-form-{{$student->id}}" action="{{route('delete',$student->id)}}" method="POST" style="display:none;">
+    {{csrf_field()}}
+    {{method_field('delete')}}
+  </form>
+  <button onClick="if(confirm('Confirm deleting the student info?')){
+    event.preventDefault();
+    document.getElementById('delete-form-{{$student->id}}').submit();
+  }else{
+    event.preventDefault();
+  }" class="btn btn-raised btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
+</td>
           </tr>
         @endforeach
 
